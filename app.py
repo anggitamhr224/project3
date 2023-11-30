@@ -42,7 +42,7 @@ if page == "Edit Data":
 
         with st.expander(f'a.n. {nama_pemain_lama}'):
             with st.form(f'data-{id}'):
-                nama_pemain_baru = st.selectbox("nama_pemain", nama_pemain_lama)
+                nama_pemain_baru = st.text_input("nama_pemain", nama_pemain_lama)
                 nama_pelatih_baru = st.text_input("nama_pelatih", nama_pelatih_lama)
                 jenis_kelamin_baru = st.selectbox("jenis_kelamin", list_symptom, list_symptom.index(jenis_kelamin_lama))
                 posisi_baru = st.multiselect("posisi", ['Penyerang', 'Gelandang', 'Bertahan', 'Kiper'], eval(posisi_lama))
