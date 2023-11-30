@@ -45,7 +45,7 @@ if page == "Edit Data":
                 nama_pemain_baru = st.selectbox("nama_pemain", nama_pemain_lama)
                 nama_pelatih_baru = st.text_input("nama_pelatih", nama_pelatih_lama)
                 jenis_kelamin_baru = st.selectbox("jenis_kelamin", list_symptom, list_symptom.index(jenis_kelamin_lama))
-                posisi_baru = st.multiselect("posisi", ['cough', 'flu', 'headache', 'stomache'], eval(posisi_lama))
+                posisi_baru = st.multiselect("posisi", ['Penyerang', 'Gelandang', 'Bertahan', 'Kiper'], eval(posisi_lama))
                 asal_club_baru = st.text_input("asal_club", asal_club_lama)
                 asal_negara_baru = st.text_input("asal_negara", asal_negara_lama)
                 tempat_lahir_baru = st.text_input("tempat_lahir", tempat_lahir_lama)
