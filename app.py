@@ -49,7 +49,7 @@ if page == "Edit Data":
                 asal_club_baru = st.text_input("asal_club", asal_club_lama)
                 asal_negara_baru = st.text_input("asal_negara", asal_negara_lama)
                 tempat_lahir_baru = st.text_input("tempat_lahir", tempat_lahir_lama)
-                tanggal_lahir_baru = st.date_input("tanggal_lahir", tanggal_lahir_lama, min_value=datetime(1800,1,1))
+                tanggal_lahir_baru = st.date_input("tanggal_lahir", tanggal_lahir_lama)
                 tinggi_badan_baru = st.text_input("tinggi_badan", tinggi_badan_lama)
                 
                 col1, col2 = st.columns([1, 6])
