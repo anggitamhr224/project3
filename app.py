@@ -52,7 +52,7 @@ if page == "Edit Data":
                 tanggal_lahir_baru = st.date_input("tanggal_lahir", tanggal_lahir_lama)
                 tinggi_badan_baru = st.text_input("tinggi_badan", tinggi_badan_lama)
                 
-                col1, col2 = st.columns([1, 7])
+                col1, col2 = st.columns([1, 6])
 
                 with col1:
                     if st.form_submit_button('UPDATE'):
