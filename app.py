@@ -59,7 +59,7 @@ if page == "Edit Data":
                         with conn.session as session:
                             query = text('UPDATE biodata \
                                           SET nama_pemain=:1, nama_pelatih=:2, jenis_kelamin=:3, posisi=:4, \
-                                          asal_club=:5, asal_negara=:6, tempat_lahir=:7, tanggal_lahir=:8, tinggi_badan=:9 \
+                                          asal_club=:5, asal_negara=:6, tempat_lahir=:7, tanggal_lahir=:8, tinggi_badan=:1 \
                                           WHERE id=:10;')
                             session.execute(query, {'1':nama_pemain_baru, '2':nama_pelatih_baru, '3':jenis_kelamin_baru, '4':str(posisi_baru), 
                                                     '5':asal_club_baru, '6':asal_negara_baru, '7':tempat_lahir_baru, '8':tanggal_lahir_baru, '9':tinggi_badan_baru, '10':id})
