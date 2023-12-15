@@ -15,8 +15,13 @@ st.header('BIODATA PEMAIN BOLA TERBAIK')
 page = st.sidebar.selectbox("Pilih Menu", ["View Data","Edit Data"])
 
 if page == "View Data":
-    data = conn.query('SELECT * FROM biodata ORDER By id;', ttl="0").set_index('id')
+  
+    search_input = st.text_input("Cari Nama Pemain Bola", "")
+
+    query_str = f"SELECT * FROM BIODATA WHERE LOWER(nama_pemain) LIKE LOWER('%{search_input}%') OR LOWER(nama_pelatih) LIKE LOWER('%{search_input}%') OR LOWER(asal_club) LIKE LOWER('%{search_input}%') ORDER By id;"
+    data = conn.query(query_str, ttl="0").set_index('id')
     st.dataframe(data)
+
 
 if page == "Edit Data":
     if st.button('Tambah Data'):
